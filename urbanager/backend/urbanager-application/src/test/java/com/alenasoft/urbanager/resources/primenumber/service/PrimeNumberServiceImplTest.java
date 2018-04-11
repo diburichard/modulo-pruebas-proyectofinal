@@ -19,4 +19,12 @@ public class PrimeNumberServiceImplTest {
     boolean expected = true;
     assertThat(service.isPrime(1)).isEqualTo(expected);
   }
+
+  @Test
+  public void testGetisPrimeIfNumberIsDivisibleByOneAndItselftReturnTrue() {
+    PrimeNumberService service = new PrimeNumberServiceImpl();
+    boolean expected = true;
+    assertThat(service.isPrime(3)).isEqualTo(expected);
+  }
+
 }
