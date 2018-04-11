@@ -20,4 +20,12 @@ public class PrimeNumberServiceImpl implements PrimeNumberService {
         if(contador <= 2)  return true;
         return false;
     }
+
+    @Override
+    public String eval(int num1) {
+
+        if ( isPrime( num1 ) ) return "OK";
+        return  "FAIL";
+    }
+
 }

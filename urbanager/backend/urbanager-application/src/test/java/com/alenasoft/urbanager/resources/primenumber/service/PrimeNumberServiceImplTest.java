@@ -38,7 +38,13 @@ public class PrimeNumberServiceImplTest {
   public void testGetIsPrimeEvaluateIfNumberIsDivisibleByOneAndReturnOK() {
     PrimeNumberService service = new PrimeNumberServiceImpl();
     String expected = "OK";
-    assertThat(service.Eval(1)).isEqualTo(expected);
+    assertThat(service.eval(1)).isEqualTo(expected);
+  }
+  @Test
+  public void testGetIsPrimeEvaluateIfNegativeNumberIsDivisibleByOneAndItselftReturnFAIL() {
+    PrimeNumberService service = new PrimeNumberServiceImpl();
+    String expected = "FAIL";
+    assertThat(service.eval(-3)).isEqualTo(expected);
   }
 
 
