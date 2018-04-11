@@ -21,7 +21,7 @@ public class PrimeNumberServiceImplTest {
   }
 
   @Test
-  public void testGetisPrimeIfNumberIsDivisibleByOneAndItselftReturnTrue() {
+  public void testGetisPrimeIfNumberIsDivisibleOnlyByOneAndItselftReturnTrue() {
     PrimeNumberService service = new PrimeNumberServiceImpl();
     boolean expected = true;
     assertThat(service.isPrime(3)).isEqualTo(expected);
@@ -33,5 +33,7 @@ public class PrimeNumberServiceImplTest {
     boolean expected = false;
     assertThat(service.isPrime(-3)).isEqualTo(expected);
   }
+
+
 
 }
