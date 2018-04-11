@@ -9,16 +9,15 @@ public class PrimeNumberServiceImpl implements PrimeNumberService {
 
     @Override
     public boolean isPrime(int num1) {
-        int contador = 0;
+        int dividercounter = 0;
         if ( num1 <= 0 ) return false;
-
         for ( int i = 1; i <= num1; i++ ) {
            if (( num1 % i ) == 0 ) {
-               contador++;
+               dividercounter++;
+               if ( dividercounter > 2 ) return false;
            }
         }
-        if(contador <= 2)  return true;
-        return false;
+        return true;
     }
 
     @Override
