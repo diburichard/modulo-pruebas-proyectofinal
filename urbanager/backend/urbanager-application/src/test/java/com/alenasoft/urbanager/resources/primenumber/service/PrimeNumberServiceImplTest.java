@@ -27,4 +27,11 @@ public class PrimeNumberServiceImplTest {
     assertThat(service.isPrime(3)).isEqualTo(expected);
   }
 
+  @Test
+  public void testGetisPrimeIfNegativeNumberIsDivisibleByOneAndItselftReturnFalse() {
+    PrimeNumberService service = new PrimeNumberServiceImpl();
+    boolean expected = false;
+    assertThat(service.isPrime(-3)).isEqualTo(expected);
+  }
+
 }
