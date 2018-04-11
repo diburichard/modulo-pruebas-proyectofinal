@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PrimeNumberServiceImplTest {
   @Test
   public void testMethodisPrimeWithOne() {
-    PrimeNumberService service = new PrimeNumberService();
+    PrimeNumberService service = new PrimeNumberServiceImpl();
     boolean expected = true;
     assertThat(service.isPrime(1)).isEqualTo(expected);
   }
