@@ -27,4 +27,24 @@ public class PrimeNumberServiceImpl implements PrimeNumberService {
         return  "FAIL";
     }
 
+    @Override
+    public int[] getNPrimeNumbers(int number){
+
+        if(number == 0){
+            return new int[]{};
+        }
+
+        int contador = 0;
+        int[] primeNumbers = new int[number];
+
+        while(contador != number){
+            if(isPrime(contador)){
+                primeNumbers[contador] = contador;
+            }
+            contador++;
+        }
+
+        return primeNumbers;
+    }
+
 }
