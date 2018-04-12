@@ -9,9 +9,9 @@ public class PrimeNumberServiceImpl implements PrimeNumberService {
 
     @Override
     public boolean isPrime(int num1) {
-        int dividercounter = 0;
-        if ( num1 <= 0 ) return false;
-        for ( int i = 1; i <= num1; i++ ) {
+        int dividercounter = 1;
+        if ( num1 <= 1 ) return false;
+        for ( int i = 2; i <= num1; i++ ) {
            if (( num1 % i ) == 0 ) {
                dividercounter++;
                if ( dividercounter > 2 ) return false;
@@ -30,18 +30,21 @@ public class PrimeNumberServiceImpl implements PrimeNumberService {
     @Override
     public int[] getNPrimeNumbers(int number){
 
-        if(number == 0){
+        if(number <= 0){
             return new int[]{};
         }
 
         int contador = 0;
+        int i = 1;
+
         int[] primeNumbers = new int[number];
 
         while(contador != number){
-            if(isPrime(contador)){
-                primeNumbers[contador] = contador;
+            if(isPrime(i)){
+                primeNumbers[contador] = i;
+                contador++;
             }
-            contador++;
+            i++;
         }
 
         return primeNumbers;
