@@ -55,4 +55,11 @@ public class PrimeNumberServiceImplTest {
     Assert.assertArrayEquals( expected, service.getNPrimeNumbers(0) );
   }
 
+  @Test
+  public void testGetNPrimerNumbersIfNIsTen(){
+    PrimeNumberService service = new PrimeNumberServiceImpl();
+    int[] expected = {2,3,5,7,11,13, 17, 19, 23, 29};
+    Assert.assertArrayEquals( expected, service.getNPrimeNumbers(10) );
+  }
+
 }
