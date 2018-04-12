@@ -29,6 +29,9 @@ public class PrimeNumberServiceImpl implements PrimeNumberService {
 
     @Override
     public int[] getNPrimeNumbers(int number){
+        if(number > 10000){
+            throw new IllegalArgumentException("El número enviado no debe ser mayor a diez mil");
+        }
 
         if(number <= 0){
             return new int[]{};
