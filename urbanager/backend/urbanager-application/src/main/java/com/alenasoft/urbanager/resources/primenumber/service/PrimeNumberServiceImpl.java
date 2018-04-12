@@ -34,15 +34,15 @@ public class PrimeNumberServiceImpl implements PrimeNumberService {
             return new int[]{};
         }
 
-        int contador = 0;
+        int oounter = 0;
         int i = 1;
 
         int[] primeNumbers = new int[number];
 
-        while(contador != number){
+        while(oounter != number){
             if(isPrime(i)){
-                primeNumbers[contador] = i;
-                contador++;
+                primeNumbers[oounter] = i;
+                oounter++;
             }
             i++;
         }

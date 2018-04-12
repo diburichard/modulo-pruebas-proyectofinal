@@ -56,10 +56,15 @@ public class PrimeNumberServiceImplTest {
   }
 
   @Test
-  public void testGetNPrimerNumbersIfNIsTen(){
+  public void testGetNPrimeNumbersIfNIsTen(){
     PrimeNumberService service = new PrimeNumberServiceImpl();
     int[] expected = {2,3,5,7,11,13, 17, 19, 23, 29};
     Assert.assertArrayEquals( expected, service.getNPrimeNumbers(10) );
   }
 
+  @Test(expected = IllegalArgumentException.class)
+  public void testGetNPrimeNumbersIfNIsLargerThanTenThousandThrowsException(){
+    PrimeNumberService service = new PrimeNumberServiceImpl();
+    service.getNPrimeNumbers(10001);
+  }
 }
