@@ -21,7 +21,7 @@ import java.net.URI;
 @Api(value = "Arithmetic", description = "Arithmetic Operations")
 public class PrimeNumberResource {
 
-    @Inject
-    private PrimeNumberService service;
+//    @Inject
+//    private PrimeNumberService service;
 }
 

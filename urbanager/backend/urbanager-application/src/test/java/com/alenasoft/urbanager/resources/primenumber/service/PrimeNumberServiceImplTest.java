@@ -7,6 +7,7 @@ import com.alenasoft.urbanager.resources.example.service.ExampleServiceImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Assert;
 import org.mockito.Matchers;
 import org.mockito.Mockito;
 
@@ -47,5 +48,11 @@ public class PrimeNumberServiceImplTest {
     assertThat(service.eval(-3)).isEqualTo(expected);
   }
 
+  @Test
+  public void testGetNPrimeNumbersIfNIsZero(){
+    PrimeNumberService service = new PrimeNumberServiceImpl();
+    int[] expected = {};
+    Assert.assertArrayEquals( expected, service.getNPrimeNumbers(0) );
+  }
 
 }
